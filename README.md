@@ -30,7 +30,7 @@ After that, just call the methods below:
 
 Accounts
 ===============
-http://docs.recurly.com/api/accounts
+https://dev.recurly.com/docs/list-accounts
 
 
 
@@ -48,10 +48,21 @@ http://docs.recurly.com/api/accounts
   
     recurly.accounts.notes(accountcode, callback)
 
+Adjustments
+===============
+https://dev.recurly.com/docs/list-an-accounts-adjustments
+
+	recurly.adjustments.list(accountcode, callback)
+  
+    recurly.adjustments.get(uuid, callback)
+  
+	recurly.adjustments.create(accountcode, details, callback)
+
+	recurly.adjustments.remove(uuid, callback)
 
 Billing Information
 ===============
-http://docs.recurly.com/api/billing-info
+https://dev.recurly.com/docs/lookup-an-accounts-billing-info
 
 	recurly.billingInfo.update(accountcode, details, callback)
 
@@ -62,37 +73,21 @@ http://docs.recurly.com/api/billing-info
 	recurly.billingInfo.remove(accountcode, callback) 
 
 
-
-Adjustments
-===============
-http://docs.recurly.com/api/adjustments
-
-	recurly.adjustments.list(accountcode, callback)
-  
-    recurly.adjustments.get(uuid, callback)
-  
-	recurly.adjustments.create(accountcode, details, callback)
-
-	recurly.adjustments.remove(uuid, callback)
-    
-
-
-
 Coupons
 ===============
-http://docs.recurly.com/api/coupons
+https://dev.recurly.com/docs/list-active-coupons
 
 	recurly.coupons.list(callback, filter)
-	
+
 	recurly.coupons.get(couponcode, callback)
 
 	recurly.coupons.create(details, callback)
 
 	recurly.coupons.deactivate(couponcode, callback)
 
-Coupon Redemtion
+Coupon Redemptions
 =================
-http://docs.recurly.com/api/coupons/coupon-redemption
+https://dev.recurly.com/docs/lookup-a-coupon-redemption-on-an-account
   
 	recurly.couponRedemption.redeem(couponcode, details, callback)
 
@@ -102,14 +97,12 @@ http://docs.recurly.com/api/coupons/coupon-redemption
 
 	recurly.couponRedemption.getByInvoice(invoicenumber, callback)
 
-
-
 Invoices
 ===============
-http://docs.recurly.com/api/invoices
+https://dev.recurly.com/docs/list-invoices
 
 	recurly.invoices.list(callback, filter)
-	
+
 	recurly.invoices.listByAccount(accountcode, callback, filter)
 
 	recurly.invoices.get(invoicenumber, callback)
@@ -128,12 +121,40 @@ http://docs.recurly.com/api/invoices
 
     recurly.invoices.enterOfflinePayment(invoicenumber, details, callback)
 
+(Subscription) Plans
+==================
+https://dev.recurly.com/docs/list-plans
+
+	recurly.plans.list(callback, filter) 
+
+	recurly.plans.get(plancode, callback) 
+
+	recurly.plans.create(details, callback)
+  
+	recurly.plans.update(plancode, details, callback)
+  
+	recurly.plans.remove(plancode, callback)
+
+Plan Add-ons
+==================
+https://dev.recurly.com/docs/list-add-ons-for-a-plan
+
+	recurly.planAddons.list(plancode, callback, filter) 
+
+	recurly.planAddons.get(plancode, addoncode, callback) 
+  
+	recurly.planAddons.create(plancode, details, callback)
+  
+	recurly.planAddons.update(plancode, addoncode, details, callback)
+  
+	recurly.planAddons.remove(plancode, addoncode, callback)
+
 Subscriptions
 ===============
-http://docs.recurly.com/api/subscriptions
+https://dev.recurly.com/docs/list-subscriptions
 
 	recurly.subscriptions.list(callback, filter) 
-	
+
 	recurly.subscriptions.listByAccount(accountcode, callback) 
 
 	recurly.subscriptions.get(uuid, callback) 
@@ -154,52 +175,18 @@ http://docs.recurly.com/api/subscriptions
   
 	recurly.subscriptions.terminate(uuid, refundType, callback) 
 
- 	recurly.subscriptions.postpone(uuid, nextRenewalDate, callback) 
-
-
-Subscription Plans
-==================
-http://docs.recurly.com/api/plans
-
-	recurly.plans.list(callback, filter) 
-
-	recurly.plans.get(plancode, callback) 
-	
-	recurly.plans.create(details, callback)
-  
-	recurly.plans.update(plancode, details, callback)
-  
-	recurly.plans.remove(plancode, callback)
-
-Plan Add-ons
-==================
-http://docs.recurly.com/api/plans/add-ons
-
-	recurly.planAddons.list(plancode, callback, filter) 
-
-	recurly.planAddons.get(plancode, addoncode, callback) 
-  
-	recurly.planAddons.create(plancode, details, callback)
-  
-	recurly.planAddons.update(plancode, addoncode, details, callback)
-  
-	recurly.planAddons.remove(plancode, addoncode, callback)
-
+	recurly.subscriptions.postpone(uuid, nextRenewalDate, callback) 
 
 Transactions
 ===============
-http://docs.recurly.com/api/transactions
+https://dev.recurly.com/docs/list-transactions
 
 	recurly.transactions.list(callback, filter) 
 
-
 	recurly.transactions.listByAccount(accountcode, callback, filter) 
-
 
 	recurly.transactions.get(id, callback) 
 
-
 	recurly.transactions.create(details, callback) 
-
 
 	recurly.transactions.refund(id, callback, amount) 
