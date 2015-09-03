@@ -53,7 +53,9 @@ Billing Information
 ===============
 http://docs.recurly.com/api/billing-info
 
-	recurly.billingInfo.update(accountcode, details, callback) 
+	recurly.billingInfo.update(accountcode, details, callback)
+
+	recurly.billingInfo.create(accountcode, details, callback) 
 
 	recurly.billingInfo.get(accountcode, callback) 
 
