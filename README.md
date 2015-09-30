@@ -32,9 +32,7 @@ Accounts
 ===============
 https://dev.recurly.com/docs/list-accounts
 
-
-
-	recurly.accounts.list(callback, filter)
+	recurly.accounts.list(filter, callback)
 
 	recurly.accounts.create(details, callback)
 
@@ -77,7 +75,7 @@ Coupons
 ===============
 https://dev.recurly.com/docs/list-active-coupons
 
-	recurly.coupons.list(callback, filter)
+	recurly.coupons.list(filter, callback)
 
 	recurly.coupons.get(couponcode, callback)
 
@@ -101,9 +99,9 @@ Invoices
 ===============
 https://dev.recurly.com/docs/list-invoices
 
-	recurly.invoices.list(callback, filter)
+	recurly.invoices.list(filter, callback)
 
-	recurly.invoices.listByAccount(accountcode, callback, filter)
+	recurly.invoices.listByAccount(accountcode, filter, callback)
 
 	recurly.invoices.get(invoicenumber, callback)
   
@@ -125,7 +123,7 @@ https://dev.recurly.com/docs/list-invoices
 ==================
 https://dev.recurly.com/docs/list-plans
 
-	recurly.plans.list(callback, filter) 
+	recurly.plans.list(filter, callback)
 
 	recurly.plans.get(plancode, callback) 
 
@@ -139,7 +137,7 @@ Plan Add-ons
 ==================
 https://dev.recurly.com/docs/list-add-ons-for-a-plan
 
-	recurly.planAddons.list(plancode, callback, filter) 
+	recurly.planAddons.list(plancode, filter, callback)
 
 	recurly.planAddons.get(plancode, addoncode, callback) 
   
@@ -153,9 +151,9 @@ Subscriptions
 ===============
 https://dev.recurly.com/docs/list-subscriptions
 
-	recurly.subscriptions.list(callback, filter) 
+	recurly.subscriptions.list(filter, callback)
 
-	recurly.subscriptions.listByAccount(accountcode, callback) 
+	recurly.subscriptions.listByAccount(accountcode, filter, callback) 
 
 	recurly.subscriptions.get(uuid, callback) 
 
@@ -181,12 +179,12 @@ Transactions
 ===============
 https://dev.recurly.com/docs/list-transactions
 
-	recurly.transactions.list(callback, filter) 
+	recurly.transactions.list(filter, callback)
 
-	recurly.transactions.listByAccount(accountcode, callback, filter) 
+	recurly.transactions.listByAccount(accountcode, filter, callback)
 
 	recurly.transactions.get(id, callback) 
 
 	recurly.transactions.create(details, callback) 
 
-	recurly.transactions.refund(id, callback, amount) 
+	recurly.transactions.refund(id, amount, callback)
