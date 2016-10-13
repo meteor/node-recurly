@@ -8,6 +8,10 @@ Installation
 ===============
 
 	git clone https://github.com/cgerrior/node-recurly.git
+	
+or you can install with NPM
+
+	npm install https://github.com/cgerrior/node-recurly.git --save
 
 add a config file to your project that has contents similar to:
 
@@ -174,6 +178,20 @@ https://dev.recurly.com/docs/list-subscriptions
 	recurly.subscriptions.terminate(uuid, refundType, callback) 
 
 	recurly.subscriptions.postpone(uuid, nextRenewalDate, callback) 
+
+Subscription Usage
+===============
+https://dev.recurly.com/docs/list-add-ons-usage
+
+	recurly.usage.list(uuid, addOnCode, billingStatus, callback)
+
+	recurly.usage.log(uuid, addOnCode, details, callback)
+
+	recurly.usage.get(uuid, addOnCode, usageId, callback)
+
+	recurly.usage.update(uuid, addOnCode, usageId, details, callback)
+
+    recurly.usage.remove(uuid, addOnCode, usageId, callback)
 
 Transactions
 ===============

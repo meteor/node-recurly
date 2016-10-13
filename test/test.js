@@ -3,9 +3,9 @@ var Recurly = require('../'),
 	recurly = new Recurly(config),
 	utils = require('../lib/utils');
 
-// recurly.accounts.list(function(res){
+//recurly.accounts.list(function(res){
 // 	console.log(res);
-// })
+//})
 
 // recurly.accounts.get(11, function(res){
 // 	console.log(res);
@@ -200,18 +200,22 @@ var Recurly = require('../'),
 // 	console.log(res);
 // })
 
+//recurly.usage.list('35f117281fc7a1074ecbfa4079955f13', 'emails', 'all', function(res){
+//  console.log(res);
+//})
 
+//recurly.usage.log('35f117281fc7a1074ecbfa4079955f13', 'emails', {amount: 10, usage_timestamp: '2016-05-05T19:09:15Z'}, function(res){
+//  console.log(res);
+//})
 
+//recurly.usage.get('35f117281fc7a1074ecbfa4079955f13', 'emails', '519297694292772131', function(res){
+//  console.log(res);
+//})
 
+//recurly.usage.update('35f117281fc7a1074ecbfa4079955f13', 'emails', '519297694292772131', {amount: 100, usage_timestamp: '2016-05-05T19:09:15Z'}, function(res){
+//  console.log(res);
+//})
 
-
-
-
-
-
-
-
-
-
-
-
+//recurly.usage.remove('35f117281fc7a1074ecbfa4079955f13', 'emails', '519297694292772131', function(res){
+//  console.log(res);
+//})
