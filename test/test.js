@@ -123,9 +123,9 @@ var Recurly = require('../'),
 // 	console.log(res);
 // })
 
-// recurly.subscriptions.listByAccount(1, function(res){
-// 	console.log(res);
-// })
+//recurly.subscriptions.listByAccount(1, {state: 'in_trial'}, function(res){
+//  console.log(res);
+//})
 
 // recurly.subscriptions.get('1b71110580e1768adb5a224bbc9dd0b0', function(res){
 // 	console.log(res);
