@@ -27,7 +27,7 @@ var Recurly = require('../'),
 // 	console.log(res);
 // })
 
-// recurly.adjustments.list(11, function(res){
+// recurly.adjustments.list(11, {begin_time: '2017-01-01T00:00:00Z', end_time: '2017-06-01T00:00:00Z'}, function(res){
 // 	console.log(res);
 // })
 
